@@ -1,6 +1,6 @@
 divert(-1)
 
-define(print_new_line, {zero()plus(10)write_chr()})
+define(print_new_line, {zero()plus(10)write_chr()zero()})
 
 define(print_string, {until(0, {write_chr()right(1)})})
 

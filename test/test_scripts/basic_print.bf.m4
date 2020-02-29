@@ -1,0 +1,10 @@
+divert(0)dnl
+print_new_line()
+right(10)zero()plus(1)left(10)
+until(1, {zero()plus(97)right(1)})
+left(10)
+print_string()
+print_new_line()
+plus(8)
+print_digit()
+print_new_line()
