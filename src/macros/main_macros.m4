@@ -6,6 +6,9 @@ define(left, {repeat_n({<}, $1)})
 define(right, {repeat_n({>}, $1)})
 define(minus, {repeat_n({-}, $1)})
 define(plus, {repeat_n({+}, $1)})
+define(read_chr, {,})
+define(write_chr, {.})
+define(zero, {[-]})
 
 define({find_right}, {minus($2)[plus($2)right($1)minus($2)]plus($2)})
 define({find_left}, {minus($2)[plus($2)left($1)minus($2)]plus($2)})
@@ -35,11 +38,7 @@ define(if, {>[-]+<minus($1)[>-<
     $2
 >]<})
 
+dnl does not preserve test value
+define(until, {minus($1)[plus($1)$2minus($1)]})
+
 divert(0)dnl
-right(3)
-find_right(2,3)
-if(2,right(1)left(1), right(2)left(2))
-copy_right_n(3)
-copy_left_n(2)
-copy_n_left_n(2, 1)
-move_n_right_n(2, 5)
