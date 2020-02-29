@@ -41,4 +41,6 @@ define(if, {>[-]+<minus($1)[>-<
 dnl does not preserve test value
 define(until, {minus($1)[plus($1)$2minus($1)]})
 
+define(until_preserve, {until($1, $2)plus($1)})
+
 divert(0)dnl
