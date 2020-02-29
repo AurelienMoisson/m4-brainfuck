@@ -1,3 +1,6 @@
+mkdir -p test_output
+mkdir -p bf_output
+
 for filename in test_scripts/*
 do
     test_name=$(basename $filename .bf.m4)
