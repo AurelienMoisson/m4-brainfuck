@@ -1,0 +1,26 @@
+#source code
+
+## macros
+
+In the directory 'macros', you will find a lot of macros used to make writing brainfuck slightly easier.
+
+## memory use
+
+The memory is divided into chunks of varying sizes.
+Each chunk is arranged as such :
+
+```
+empty_space[4]   chunk_address[3]   chunk_type[1]   chunk_content[...]
+```
+
+### chunk_address
+
+A chunk_address is guaranteed to be unique.
+They are also consecutive.
+
+### chunk_type
+
+0. A chunk_type of 0 means the memory is not allocated yet. It also means there is no allocated chunk following this.
+1. A chunk_type of 1 means the following chunk is a 0-terminated string. The 0 terminator is considered part of the chunk_content.
+
+There may be more chunk_types added in the future
