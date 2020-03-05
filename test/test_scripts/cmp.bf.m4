@@ -1,0 +1,31 @@
+divert(-1)dnl
+define({cmp_15}, {
+right(2)
+zero()
+left(2)
+cmp(15, {
+    right(2)
+    plus(97)
+    write_chr()
+    left(2)
+},{
+    right(2)
+    plus(98)
+    write_chr()
+    left(2)
+},{
+    right(2)
+    plus(99)
+    write_chr()
+    left(2)
+})
+})
+divert(0)dnl
+plus(12)
+cmp_15()
+zero()plus(15)
+cmp_15()
+zero()
+plus(27)
+cmp_15()
+print_new_line()

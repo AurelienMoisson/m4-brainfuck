@@ -1,0 +1,16 @@
+divert(0)dnl
+plus(5)
+right(1)
+plus(97)
+add_n(1, {left(1)}, {right(1)})
+left(1)
+write_chr()
+print_new_line()
+
+zero()
+plus(97)>plus(97)>plus(97)
+>plus(1)>plus(2)>plus(3)
+add_n(3, {left(3)}, {right(3)})
+left(5)
+print_string()
+print_new_line()
